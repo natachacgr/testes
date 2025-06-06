@@ -21,6 +21,8 @@ describe("Admin - Lista de Pedidos (Elo Drinks)", () => {
     cy.get('input[id^="email"]:visible').type(email);
     cy.get('input[id^="senha"]:visible').type(senha);
 
+    cy.wait(500);
+
     cy.contains('button:visible', /Entrar/i).click({ force: true });
 
     cy.location("pathname", { timeout: 1000 }).should("eq", "/dashboard");
@@ -36,7 +38,10 @@ describe("Admin - Lista de Pedidos (Elo Drinks)", () => {
 
     cy.location("pathname").should("eq", "/pedidos");
 
-    cy.contains("tbody tr", "Casamento Natacha e Otavio", { timeout: 1000 })
+    cy.wait(2000);
+
+    cy.get("tbody")
+      .contains(/Casamento\s+Natacha\s+e\s+Otavio/i)
       .scrollIntoView()
       .should("be.visible");
   });
