@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-06T21:47:59.370Z",
+    "end": "2025-06-06T21:48:03.056Z",
+    "duration": 3686,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4df5e66e-0133-4472-a037-d9eacdf6f8db",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+          "title": "Testes de Login - Elo Drinks",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar a página de login",
+              "fullTitle": "Testes de Login - Elo Drinks Deve acessar a página de login",
+              "timedOut": null,
+              "duration": 621,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Procurar por botões/links de login na página principal\ncy.get(\"body\").then($body => {\n  if ($body.find('[data-cy=\"login\"], a[href*=\"login\"], button').length > 0) {\n    cy.get('[id^=\"login\"], a[href*=\"login\"], button').contains(/login|entrar/i).first().click();\n  } else {\n    // Se não encontrar, navegar diretamente\n    cy.visit(\"https://elodrinks.confianopai.com/login\");\n  }\n});\ncy.url().should(\"include\", \"login\");\ncy.get('input[id^=\"email\"]').should(\"be.visible\");\ncy.get('input[type=\"password\"]').should(\"be.visible\");",
+              "err": {},
+              "uuid": "f83b9751-08db-466d-a54d-adcef1303674",
+              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve mostrar erro com credenciais inválidas",
+              "fullTitle": "Testes de Login - Elo Drinks Deve mostrar erro com credenciais inválidas",
+              "timedOut": null,
+              "duration": 1006,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://elodrinks.confianopai.com/login\");\n// Preencher formulário com dados inválidos\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"usuario@email.com\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senhaerrada123\");\ncy.get('button[type=\"submit\"], button').contains(/Entrar/i).then($buttons => {\n  // Procurar primeiro botão visível\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    // Se nenhum visível, forçar clique no primeiro\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});\ncy.url({\n  timeout: 10000\n}).should(\"not.include\", /login/);",
+              "err": {},
+              "uuid": "92e5b8b1-6125-4d4f-aa44-5d52e57851cd",
+              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve realizar login com credenciais válidas",
+              "fullTitle": "Testes de Login - Elo Drinks Deve realizar login com credenciais válidas",
+              "timedOut": null,
+              "duration": 801,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a, button\").contains(/login/i).first().click();\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"email@email\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senha123\");\ncy.get('button[type=\"submit\"], button').contains(/Entrar/i).then($buttons => {\n  // Procurar primeiro botão visível\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    // Se nenhum visível, forçar clique no primeiro\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});",
+              "err": {},
+              "uuid": "d349c40a-f1d9-452a-993d-1b60ce0f5938",
+              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f83b9751-08db-466d-a54d-adcef1303674",
+            "92e5b8b1-6125-4d4f-aa44-5d52e57851cd",
+            "d349c40a-f1d9-452a-993d-1b60ce0f5938"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2428,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

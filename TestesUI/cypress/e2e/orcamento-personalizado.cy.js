@@ -23,7 +23,7 @@ describe("Testes de Orçamento Personalizado - Elo Drinks", () => {
       });
   });
 
-  it.skip("Deve acessar página de orçamento personalizado", () => {
+  it("Deve acessar página de orçamento personalizado", () => {
     cy.get("a, button")
       .contains(/orçamento/i)
       .first()
@@ -42,7 +42,7 @@ describe("Testes de Orçamento Personalizado - Elo Drinks", () => {
       .click();
   });
 
-  it.skip("Não permitir avançar os steps com campos em branco", () => {
+  it("Não permitir avançar os steps com campos em branco", () => {
     cy.get("a, button")
       .contains(/orçamento/i)
       .first()
