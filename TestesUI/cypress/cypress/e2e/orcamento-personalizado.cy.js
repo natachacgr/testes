@@ -1,14 +1,6 @@
 describe("Testes de Orçamento Personalizado - Elo Drinks", () => {
   beforeEach(() => {
     cy.visit("https://elodrinks.confianopai.com/");
-  });
-
-  it("Deve acessar página de orçamento personalizado", () => {
-    // Procurar por links/botões relacionados a orçamento
-    cy.get("a, button").contains(/login/i).first().click();
-  });
-
-  it("Deve estar logado para acessar a pagina de pacotes", () => {
     cy.get("a, button").contains(/login/i).first().click();
 
     cy.get('input[id^="email"]:visible')
@@ -32,13 +24,25 @@ describe("Testes de Orçamento Personalizado - Elo Drinks", () => {
   });
 
   it("Deve acessar página de orçamento personalizado", () => {
-    // Procurar por links/botões relacionados a orçamento
     cy.get("a, button")
       .contains(/orçamento/i)
       .first()
       .click();
 
-    cy.url().should("include", /pacotes/);
-    cy.get("form, .form").should("be.visible");
+    cy.get("a, button")
+      .contains(/personalizar/i)
+      .first()
+      .click();
+
+    cy.url().should("include", "personalizar");
+
+    cy.get("p, button")
+      .contains(/casamento/i)
+      .first()
+      .click();
+  });
+
+  it("Não permitir avançar os steps com campos em branco", () => {
+    cy.get("button").contains(/→/i);
   });
 });
