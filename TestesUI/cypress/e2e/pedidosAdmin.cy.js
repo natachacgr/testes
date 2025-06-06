@@ -37,6 +37,7 @@ describe("Admin - Lista de Pedidos (Elo Drinks)", () => {
     cy.location("pathname").should("eq", "/pedidos");
 
     cy.contains("tbody tr", "Casamento Natacha e Otavio", { timeout: 1000 })
+      .scrollIntoView()
       .should("be.visible");
   });
 });
