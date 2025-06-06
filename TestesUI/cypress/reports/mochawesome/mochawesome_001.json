@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2025-06-06T21:47:59.370Z",
-    "end": "2025-06-06T21:48:03.056Z",
-    "duration": 3686,
+    "start": "2025-06-06T21:52:02.301Z",
+    "end": "2025-06-06T21:52:06.049Z",
+    "duration": 3748,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4df5e66e-0133-4472-a037-d9eacdf6f8db",
+      "uuid": "1aa894ed-663f-4026-8fd1-f14e10447894",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+          "uuid": "bfcd5ea6-f45e-4577-9de9-a1908193706a",
           "title": "Testes de Login - Elo Drinks",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deve acessar a página de login",
               "fullTitle": "Testes de Login - Elo Drinks Deve acessar a página de login",
               "timedOut": null,
-              "duration": 621,
+              "duration": 622,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "// Procurar por botões/links de login na página principal\ncy.get(\"body\").then($body => {\n  if ($body.find('[data-cy=\"login\"], a[href*=\"login\"], button').length > 0) {\n    cy.get('[id^=\"login\"], a[href*=\"login\"], button').contains(/login|entrar/i).first().click();\n  } else {\n    // Se não encontrar, navegar diretamente\n    cy.visit(\"https://elodrinks.confianopai.com/login\");\n  }\n});\ncy.url().should(\"include\", \"login\");\ncy.get('input[id^=\"email\"]').should(\"be.visible\");\ncy.get('input[type=\"password\"]').should(\"be.visible\");",
               "err": {},
-              "uuid": "f83b9751-08db-466d-a54d-adcef1303674",
-              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+              "uuid": "25c29750-cd52-4fc6-ac80-b2ca8cd5a16e",
+              "parentUUID": "bfcd5ea6-f45e-4577-9de9-a1908193706a",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Deve mostrar erro com credenciais inválidas",
               "fullTitle": "Testes de Login - Elo Drinks Deve mostrar erro com credenciais inválidas",
               "timedOut": null,
-              "duration": 1006,
+              "duration": 1007,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.visit(\"https://elodrinks.confianopai.com/login\");\n// Preencher formulário com dados inválidos\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"usuario@email.com\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senhaerrada123\");\ncy.get('button[type=\"submit\"], button').contains(/Entrar/i).then($buttons => {\n  // Procurar primeiro botão visível\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    // Se nenhum visível, forçar clique no primeiro\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});\ncy.url({\n  timeout: 10000\n}).should(\"not.include\", /login/);",
               "err": {},
-              "uuid": "92e5b8b1-6125-4d4f-aa44-5d52e57851cd",
-              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+              "uuid": "b3f4ac64-3155-4287-9b13-cb9ca889b827",
+              "parentUUID": "bfcd5ea6-f45e-4577-9de9-a1908193706a",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Deve realizar login com credenciais válidas",
               "fullTitle": "Testes de Login - Elo Drinks Deve realizar login com credenciais válidas",
               "timedOut": null,
-              "duration": 801,
+              "duration": 814,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.get(\"a, button\").contains(/login/i).first().click();\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"email@email\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senha123\");\ncy.get('button[type=\"submit\"], button').contains(/Entrar/i).then($buttons => {\n  // Procurar primeiro botão visível\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    // Se nenhum visível, forçar clique no primeiro\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});",
               "err": {},
-              "uuid": "d349c40a-f1d9-452a-993d-1b60ce0f5938",
-              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+              "uuid": "2e379989-6055-4ec5-9460-fdfa774f128b",
+              "parentUUID": "bfcd5ea6-f45e-4577-9de9-a1908193706a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f83b9751-08db-466d-a54d-adcef1303674",
-            "92e5b8b1-6125-4d4f-aa44-5d52e57851cd",
-            "d349c40a-f1d9-452a-993d-1b60ce0f5938"
+            "25c29750-cd52-4fc6-ac80-b2ca8cd5a16e",
+            "b3f4ac64-3155-4287-9b13-cb9ca889b827",
+            "2e379989-6055-4ec5-9460-fdfa774f128b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2428,
+          "duration": 2443,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

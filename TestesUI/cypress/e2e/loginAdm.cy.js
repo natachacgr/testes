@@ -1,4 +1,4 @@
-describe("Testes de Login - Elo Drinks", () => {
+describe("Testes de Login Administrador - Elo Drinks", () => {
   beforeEach(() => {
     cy.visit("https://elodrinks.confianopai.com/");
   });

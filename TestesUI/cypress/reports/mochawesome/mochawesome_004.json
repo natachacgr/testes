@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-06-06T21:48:30.095Z",
-    "end": "2025-06-06T21:48:38.821Z",
-    "duration": 8726,
+    "start": "2025-06-06T21:52:30.633Z",
+    "end": "2025-06-06T21:52:39.427Z",
+    "duration": 8794,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "791c7f74-6806-4682-886e-456f4c32523a",
+      "uuid": "f688ee64-589e-4655-a7ab-0d18b08e645b",
       "title": "",
       "fullFile": "cypress\\e2e\\pedidosAdmin.cy.js",
       "file": "cypress\\e2e\\pedidosAdmin.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f4b477c0-1b76-4dcd-8d4f-47b7c67bdb96",
+          "uuid": "3bc189f3-11f4-489f-bda4-caf81d5f8250",
           "title": "Admin - Lista de Pedidos (Elo Drinks)",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deve abrir o sidebar, acessar /pedidos e encontrar Casamento Natacha e Otavio",
               "fullTitle": "Admin - Lista de Pedidos (Elo Drinks) Deve abrir o sidebar, acessar /pedidos e encontrar Casamento Natacha e Otavio",
               "timedOut": null,
-              "duration": 7468,
+              "duration": 7462,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.get('button[class*=\"lg:hidden\"]').filter(\":visible\").first().click();\ncy.get(':nth-child(3) > .flex').first().click();\ncy.location(\"pathname\").should(\"eq\", \"/pedidos\");\ncy.wait(2000);\ncy.get(\"tbody\").contains(/Casamento\\s+Natacha\\s+e\\s+Otavio/i).scrollIntoView().should(\"be.visible\");",
               "err": {},
-              "uuid": "9cb29fde-9765-45de-a236-10bff6e374a4",
-              "parentUUID": "f4b477c0-1b76-4dcd-8d4f-47b7c67bdb96",
+              "uuid": "49edc090-0570-4821-93b9-45ceb3a9333f",
+              "parentUUID": "3bc189f3-11f4-489f-bda4-caf81d5f8250",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9cb29fde-9765-45de-a236-10bff6e374a4"
+            "49edc090-0570-4821-93b9-45ceb3a9333f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7468,
+          "duration": 7462,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

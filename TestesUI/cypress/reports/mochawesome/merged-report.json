@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2025-06-06T21:47:44.895Z",
-    "end": "2025-06-06T21:48:38.821Z",
-    "duration": 53926
+    "start": "2025-06-06T21:51:54.294Z",
+    "end": "2025-06-06T21:52:39.427Z",
+    "duration": 45133
   },
   "results": [
     {
-      "uuid": "72eabf67-65ec-41b9-9b76-0144ffaad968",
+      "uuid": "d1f7b766-9725-4c54-8599-8e80fbfcacc9",
       "title": "",
       "fullFile": "cypress\\e2e\\cadastro.cy.js",
       "file": "cypress\\e2e\\cadastro.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "732f1fc1-111c-45d9-b4fd-d58112b6cc8e",
+          "uuid": "476a98eb-5cf3-428b-b4a6-9a08e5460062",
           "title": "Testes de Cadastro - Elo Drinks",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deve acessar a página de cadastro",
               "fullTitle": "Testes de Cadastro - Elo Drinks Deve acessar a página de cadastro",
               "timedOut": null,
-              "duration": 1960,
+              "duration": 1422,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.get(\"body\").then($body => {\n  if ($body.find(\"a, button\").filter(':contains(\"Cadastro\"), :contains(\"Registrar\")').length > 0) {\n    cy.get(\"a, button\").contains(/cadastro|registro/i).first().click();\n  } else {\n    cy.visit(\"https://elodrinks.confianopai.com/cadastro\");\n  }\n});\ncy.url().should(\"match\", /cadastro|register|signup/);\ncy.get('input[name*=\"nomeCompleto\"]').should(\"be.visible\");\ncy.get('input[type=\"email\"]').should(\"be.visible\");\ncy.get('input[id^=\"celular\"]').should(\"be.visible\");",
               "err": {},
-              "uuid": "522f824c-f266-4d3d-98a0-67afdbe3342f",
-              "parentUUID": "732f1fc1-111c-45d9-b4fd-d58112b6cc8e",
+              "uuid": "ffa7d9c9-ce12-4fca-b558-4d564d92b8d6",
+              "parentUUID": "476a98eb-5cf3-428b-b4a6-9a08e5460062",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Deve validar campos obrigatórios",
               "fullTitle": "Testes de Cadastro - Elo Drinks Deve validar campos obrigatórios",
               "timedOut": null,
-              "duration": 317,
+              "duration": 332,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.visit(\"https://elodrinks.confianopai.com/cadastro\");\n// Tentar submeter formulário vazio\ncy.get('button[type=\"submit\"]').contains(/Cadastre-se|registrar|criar|enviar/i).then($buttons => {\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});\n// Verificar mensagens de validação\ncy.get(\"input[required]\").each($input => {\n  cy.wrap($input).then(el => {\n    expect(el[0].checkValidity()).to.be.false;\n  });\n});",
               "err": {},
-              "uuid": "7c3668d7-d0d0-423a-8243-cbc13f8a8573",
-              "parentUUID": "732f1fc1-111c-45d9-b4fd-d58112b6cc8e",
+              "uuid": "529823e6-b46c-4246-81c5-393ecf8d3ce7",
+              "parentUUID": "476a98eb-5cf3-428b-b4a6-9a08e5460062",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Deve validar formato de email",
               "fullTitle": "Testes de Cadastro - Elo Drinks Deve validar formato de email",
               "timedOut": null,
-              "duration": 1461,
+              "duration": 1478,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.visit(\"https://elodrinks.confianopai.com/cadastro\");\ncy.get('input[id^=\"nomeCompleto\"]').first().type(\"nome usuario\", {\n  force: true\n});\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"email-invalido\");\ncy.get('input[id^=\"celular\"]:visible').should(\"be.visible\").type(\"35 99999-99999\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senha123\");\ncy.get('button[type=\"submit\"]').contains(/Cadastre-se/i).then($buttons => {\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});\ncy.url().should(\"include\", \"/cadastro\");",
               "err": {},
-              "uuid": "53093cda-7129-4329-a0b4-fdb64091a07c",
-              "parentUUID": "732f1fc1-111c-45d9-b4fd-d58112b6cc8e",
+              "uuid": "389563f1-e84f-4f6d-87e9-c4b4f302ce09",
+              "parentUUID": "476a98eb-5cf3-428b-b4a6-9a08e5460062",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Deve realizar cadastro com dados válidos",
               "fullTitle": "Testes de Cadastro - Elo Drinks Deve realizar cadastro com dados válidos",
               "timedOut": null,
-              "duration": 1620,
+              "duration": 1614,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -101,23 +101,23 @@
               "context": null,
               "code": "cy.visit(\"https://elodrinks.confianopai.com/cadastro\");\ncy.get('input[id^=\"nomeCompleto\"]').first().type(\"nome usuario\", {\n  force: true\n});\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(gerarTimestamp() + \"email@email\");\ncy.get('input[id^=\"celular\"]:visible').should(\"be.visible\").type(\"35 99999-99999\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senha123\");\ncy.get('button[type=\"submit\"], button').contains(/Cadastre-se/i).then($buttons => {\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});\ncy.url({\n  timeout: 10000\n}).should(\"not.include\", /cadastro/);",
               "err": {},
-              "uuid": "f87d525e-5ebd-4e2a-a45e-1cfca6305026",
-              "parentUUID": "732f1fc1-111c-45d9-b4fd-d58112b6cc8e",
+              "uuid": "85505bac-9596-49cc-a409-ac7961c45946",
+              "parentUUID": "476a98eb-5cf3-428b-b4a6-9a08e5460062",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "522f824c-f266-4d3d-98a0-67afdbe3342f",
-            "7c3668d7-d0d0-423a-8243-cbc13f8a8573",
-            "53093cda-7129-4329-a0b4-fdb64091a07c",
-            "f87d525e-5ebd-4e2a-a45e-1cfca6305026"
+            "ffa7d9c9-ce12-4fca-b558-4d564d92b8d6",
+            "529823e6-b46c-4246-81c5-393ecf8d3ce7",
+            "389563f1-e84f-4f6d-87e9-c4b4f302ce09",
+            "85505bac-9596-49cc-a409-ac7961c45946"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5358,
+          "duration": 4846,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -133,7 +133,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "4df5e66e-0133-4472-a037-d9eacdf6f8db",
+      "uuid": "1aa894ed-663f-4026-8fd1-f14e10447894",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -142,7 +142,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
+          "uuid": "bfcd5ea6-f45e-4577-9de9-a1908193706a",
           "title": "Testes de Login - Elo Drinks",
           "fullFile": "",
           "file": "",
@@ -152,6 +152,102 @@
             {
               "title": "Deve acessar a página de login",
               "fullTitle": "Testes de Login - Elo Drinks Deve acessar a página de login",
+              "timedOut": null,
+              "duration": 622,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Procurar por botões/links de login na página principal\ncy.get(\"body\").then($body => {\n  if ($body.find('[data-cy=\"login\"], a[href*=\"login\"], button').length > 0) {\n    cy.get('[id^=\"login\"], a[href*=\"login\"], button').contains(/login|entrar/i).first().click();\n  } else {\n    // Se não encontrar, navegar diretamente\n    cy.visit(\"https://elodrinks.confianopai.com/login\");\n  }\n});\ncy.url().should(\"include\", \"login\");\ncy.get('input[id^=\"email\"]').should(\"be.visible\");\ncy.get('input[type=\"password\"]').should(\"be.visible\");",
+              "err": {},
+              "uuid": "25c29750-cd52-4fc6-ac80-b2ca8cd5a16e",
+              "parentUUID": "bfcd5ea6-f45e-4577-9de9-a1908193706a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve mostrar erro com credenciais inválidas",
+              "fullTitle": "Testes de Login - Elo Drinks Deve mostrar erro com credenciais inválidas",
+              "timedOut": null,
+              "duration": 1007,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://elodrinks.confianopai.com/login\");\n// Preencher formulário com dados inválidos\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"usuario@email.com\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senhaerrada123\");\ncy.get('button[type=\"submit\"], button').contains(/Entrar/i).then($buttons => {\n  // Procurar primeiro botão visível\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    // Se nenhum visível, forçar clique no primeiro\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});\ncy.url({\n  timeout: 10000\n}).should(\"not.include\", /login/);",
+              "err": {},
+              "uuid": "b3f4ac64-3155-4287-9b13-cb9ca889b827",
+              "parentUUID": "bfcd5ea6-f45e-4577-9de9-a1908193706a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve realizar login com credenciais válidas",
+              "fullTitle": "Testes de Login - Elo Drinks Deve realizar login com credenciais válidas",
+              "timedOut": null,
+              "duration": 814,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a, button\").contains(/login/i).first().click();\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"email@email\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senha123\");\ncy.get('button[type=\"submit\"], button').contains(/Entrar/i).then($buttons => {\n  // Procurar primeiro botão visível\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    // Se nenhum visível, forçar clique no primeiro\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});",
+              "err": {},
+              "uuid": "2e379989-6055-4ec5-9460-fdfa774f128b",
+              "parentUUID": "bfcd5ea6-f45e-4577-9de9-a1908193706a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "25c29750-cd52-4fc6-ac80-b2ca8cd5a16e",
+            "b3f4ac64-3155-4287-9b13-cb9ca889b827",
+            "2e379989-6055-4ec5-9460-fdfa774f128b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2443,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "37a7e2df-3f67-48e0-b129-a7c79ac23b3a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\loginAdm.cy.js",
+      "file": "cypress\\e2e\\loginAdm.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "49f97c84-92f3-4b74-b0cc-93472a9d1b18",
+          "title": "Testes de Login Administrador - Elo Drinks",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar a página de login",
+              "fullTitle": "Testes de Login Administrador - Elo Drinks Deve acessar a página de login",
               "timedOut": null,
               "duration": 621,
               "state": "passed",
@@ -162,112 +258,16 @@
               "context": null,
               "code": "// Procurar por botões/links de login na página principal\ncy.get(\"body\").then($body => {\n  if ($body.find('[data-cy=\"login\"], a[href*=\"login\"], button').length > 0) {\n    cy.get('[id^=\"login\"], a[href*=\"login\"], button').contains(/login|entrar/i).first().click();\n  } else {\n    // Se não encontrar, navegar diretamente\n    cy.visit(\"https://elodrinks.confianopai.com/login\");\n  }\n});\ncy.url().should(\"include\", \"login\");\ncy.get('input[id^=\"email\"]').should(\"be.visible\");\ncy.get('input[type=\"password\"]').should(\"be.visible\");",
               "err": {},
-              "uuid": "f83b9751-08db-466d-a54d-adcef1303674",
-              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Deve mostrar erro com credenciais inválidas",
-              "fullTitle": "Testes de Login - Elo Drinks Deve mostrar erro com credenciais inválidas",
-              "timedOut": null,
-              "duration": 1006,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(\"https://elodrinks.confianopai.com/login\");\n// Preencher formulário com dados inválidos\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"usuario@email.com\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senhaerrada123\");\ncy.get('button[type=\"submit\"], button').contains(/Entrar/i).then($buttons => {\n  // Procurar primeiro botão visível\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    // Se nenhum visível, forçar clique no primeiro\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});\ncy.url({\n  timeout: 10000\n}).should(\"not.include\", /login/);",
-              "err": {},
-              "uuid": "92e5b8b1-6125-4d4f-aa44-5d52e57851cd",
-              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Deve realizar login com credenciais válidas",
-              "fullTitle": "Testes de Login - Elo Drinks Deve realizar login com credenciais válidas",
-              "timedOut": null,
-              "duration": 801,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.get(\"a, button\").contains(/login/i).first().click();\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"email@email\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"senha123\");\ncy.get('button[type=\"submit\"], button').contains(/Entrar/i).then($buttons => {\n  // Procurar primeiro botão visível\n  const visibleButton = $buttons.filter(\":visible\").first();\n  if (visibleButton.length > 0) {\n    cy.wrap(visibleButton).click();\n  } else {\n    // Se nenhum visível, forçar clique no primeiro\n    cy.wrap($buttons.first()).click({\n      force: true\n    });\n  }\n});",
-              "err": {},
-              "uuid": "d349c40a-f1d9-452a-993d-1b60ce0f5938",
-              "parentUUID": "af8eaa91-6c0e-4b15-9f85-3c4e6ded3e5a",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "f83b9751-08db-466d-a54d-adcef1303674",
-            "92e5b8b1-6125-4d4f-aa44-5d52e57851cd",
-            "d349c40a-f1d9-452a-993d-1b60ce0f5938"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2428,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "a059b061-cec6-425a-8128-432273500558",
-      "title": "",
-      "fullFile": "cypress\\e2e\\loginAdm.cy.js",
-      "file": "cypress\\e2e\\loginAdm.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "2d2bd552-ed74-431e-8c61-c73b1fbd1bcf",
-          "title": "Testes de Login - Elo Drinks",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Deve acessar a página de login",
-              "fullTitle": "Testes de Login - Elo Drinks Deve acessar a página de login",
-              "timedOut": null,
-              "duration": 613,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// Procurar por botões/links de login na página principal\ncy.get(\"body\").then($body => {\n  if ($body.find('[data-cy=\"login\"], a[href*=\"login\"], button').length > 0) {\n    cy.get('[id^=\"login\"], a[href*=\"login\"], button').contains(/login|entrar/i).first().click();\n  } else {\n    // Se não encontrar, navegar diretamente\n    cy.visit(\"https://elodrinks.confianopai.com/login\");\n  }\n});\ncy.url().should(\"include\", \"login\");\ncy.get('input[id^=\"email\"]').should(\"be.visible\");\ncy.get('input[type=\"password\"]').should(\"be.visible\");",
-              "err": {},
-              "uuid": "20ae6c2f-bdf1-4564-ad83-14f03f64b69f",
-              "parentUUID": "2d2bd552-ed74-431e-8c61-c73b1fbd1bcf",
+              "uuid": "8016a1a0-c033-4e92-99fb-9cc89d543f42",
+              "parentUUID": "49f97c84-92f3-4b74-b0cc-93472a9d1b18",
               "isHook": false,
               "skipped": false
             },
             {
               "title": "Deve realizar login com credenciais válidas e ir para o dashboard",
-              "fullTitle": "Testes de Login - Elo Drinks Deve realizar login com credenciais válidas e ir para o dashboard",
+              "fullTitle": "Testes de Login Administrador - Elo Drinks Deve realizar login com credenciais válidas e ir para o dashboard",
               "timedOut": null,
-              "duration": 1276,
+              "duration": 1323,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -276,21 +276,21 @@
               "context": null,
               "code": "cy.get(\"a, button\").contains(/login/i).first().click();\ncy.get('input[id^=\"email\"]:visible').should(\"be.visible\").type(\"gabriel@gabriel\");\ncy.get('input[id^=\"senha\"]:visible').should(\"be.visible\").type(\"1234\");\ncy.contains('button:visible', /Entrar/i).click({\n  force: true\n});\ncy.location(\"pathname\", {\n  timeout: 15000\n}).should(\"eq\", \"/dashboard\");",
               "err": {},
-              "uuid": "c40de629-eedd-4254-95d8-85ed4439a024",
-              "parentUUID": "2d2bd552-ed74-431e-8c61-c73b1fbd1bcf",
+              "uuid": "76e9aca7-a274-45e9-bfa5-916539385525",
+              "parentUUID": "49f97c84-92f3-4b74-b0cc-93472a9d1b18",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "20ae6c2f-bdf1-4564-ad83-14f03f64b69f",
-            "c40de629-eedd-4254-95d8-85ed4439a024"
+            "8016a1a0-c033-4e92-99fb-9cc89d543f42",
+            "76e9aca7-a274-45e9-bfa5-916539385525"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1889,
+          "duration": 1944,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -306,7 +306,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "2244d5ce-c551-4876-97b4-11faf340fa62",
+      "uuid": "b5df6ff5-88d7-443a-a81b-477460b9e990",
       "title": "",
       "fullFile": "cypress\\e2e\\orcamento-personalizado.cy.js",
       "file": "cypress\\e2e\\orcamento-personalizado.cy.js",
@@ -315,7 +315,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "eb39bc5b-42ea-49ae-be14-d537797eebe5",
+          "uuid": "d7e2e29e-c016-4f20-aa96-1f649389f71e",
           "title": "Testes de Orçamento Personalizado - Elo Drinks",
           "fullFile": "",
           "file": "",
@@ -326,7 +326,7 @@
               "title": "Deve acessar página de orçamento personalizado",
               "fullTitle": "Testes de Orçamento Personalizado - Elo Drinks Deve acessar página de orçamento personalizado",
               "timedOut": null,
-              "duration": 2531,
+              "duration": 2562,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -335,8 +335,8 @@
               "context": null,
               "code": "cy.get(\"a, button\").contains(/orçamento/i).first().click();\ncy.get(\"a, button\").contains(/personalizar/i).first().click();\ncy.url().should(\"include\", \"personalizar\");\ncy.get(\"p, button\").contains(/casamento/i).first().click();",
               "err": {},
-              "uuid": "b5ac7255-32e2-43f9-9daf-ada6435c4dca",
-              "parentUUID": "eb39bc5b-42ea-49ae-be14-d537797eebe5",
+              "uuid": "ba56ddfc-51b2-4fa6-bc18-74fa3459ce49",
+              "parentUUID": "d7e2e29e-c016-4f20-aa96-1f649389f71e",
               "isHook": false,
               "skipped": false
             },
@@ -344,17 +344,17 @@
               "title": "Não permitir avançar os steps com campos em branco",
               "fullTitle": "Testes de Orçamento Personalizado - Elo Drinks Não permitir avançar os steps com campos em branco",
               "timedOut": null,
-              "duration": 5448,
+              "duration": 2681,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get(\"a, button\").contains(/orçamento/i).first().click();\ncy.get(\"p, button\").contains(/Personalizar/).first().click();\ncy.get(\"p, button\").contains(/Casamento/).first().click();\ncy.contains('span', '→').closest('button').should('be.disabled');",
               "err": {},
-              "uuid": "a06fa9c2-3ff4-4e18-bd50-29437496db2b",
-              "parentUUID": "eb39bc5b-42ea-49ae-be14-d537797eebe5",
+              "uuid": "5b424379-5b2f-46b8-9fd3-1e1a3ddc88b2",
+              "parentUUID": "d7e2e29e-c016-4f20-aa96-1f649389f71e",
               "isHook": false,
               "skipped": false
             },
@@ -362,7 +362,7 @@
               "title": "Cadastra Casamento Natacha e Otavio",
               "fullTitle": "Testes de Orçamento Personalizado - Elo Drinks Cadastra Casamento Natacha e Otavio",
               "timedOut": null,
-              "duration": 10077,
+              "duration": 10040,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -371,22 +371,22 @@
               "context": null,
               "code": "cy.get(\"a, button\").contains(/orçamento/i).first().click();\ncy.get(\"p, button\").contains(/Personalizar/).first().click();\ncy.get(\"p, button\").contains(/Casamento/).first().click();\ncy.contains('label', 'Nome do Evento').next('input').type('Casamento Natacha e Otavio');\ncy.contains('label', 'Data do Evento').next('input').click().type('2025-07-12');\ncy.contains('label', 'Hora de Início').next('input').click().type('18:15');\ncy.contains('label', 'Número de Convidados').next('input').type('250');\ncy.contains('label', 'Duração do Evento').next('input').click().type('10:00');\ncy.contains('span', '→').closest('button').should('be.enabled').click();\ncy.get('.grid > :nth-child(1)').click();\ncy.get('.grid > :nth-child(4)').click();\ncy.contains('span', '→').closest('button').should('be.enabled').click();\ncy.wait(500);\ncy.get('.grid > :nth-child(1)').click();\ncy.contains('span', '→').closest('button').should('be.enabled').click();\ncy.wait(500);\ncy.get('.grid > :nth-child(1)').find('button').eq(1).click().click().click();\ncy.contains('span', '→').closest('button').should('be.enabled').click();\ncy.wait(500);\ncy.contains('span', '→').closest('button').should('be.enabled').click();\ncy.wait(500);\ncy.get('.grid > .flex').click();\ncy.contains('span', '→').closest('button').should('be.enabled').click();\ncy.wait(500);\ncy.get('.grid > :nth-child(1) > .p-4').find('button').eq(1).click();\ncy.get('span:contains(\"Quantidade:\")').eq(1).next().find('button').eq(1).click().click().click().click().click();\ncy.get('.px-6').click();\ncy.wait(500);\ncy.contains('button', 'Enviar Pedido').should('be.enabled').click();",
               "err": {},
-              "uuid": "7e6670ba-7f17-49b5-9851-fbde5826b6cf",
-              "parentUUID": "eb39bc5b-42ea-49ae-be14-d537797eebe5",
+              "uuid": "5b9af0d5-3622-4588-9709-89266adb12a5",
+              "parentUUID": "d7e2e29e-c016-4f20-aa96-1f649389f71e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b5ac7255-32e2-43f9-9daf-ada6435c4dca",
-            "a06fa9c2-3ff4-4e18-bd50-29437496db2b",
-            "7e6670ba-7f17-49b5-9851-fbde5826b6cf"
+            "ba56ddfc-51b2-4fa6-bc18-74fa3459ce49",
+            "5b424379-5b2f-46b8-9fd3-1e1a3ddc88b2",
+            "5b9af0d5-3622-4588-9709-89266adb12a5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 18056,
+          "duration": 15283,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -402,7 +402,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "791c7f74-6806-4682-886e-456f4c32523a",
+      "uuid": "f688ee64-589e-4655-a7ab-0d18b08e645b",
       "title": "",
       "fullFile": "cypress\\e2e\\pedidosAdmin.cy.js",
       "file": "cypress\\e2e\\pedidosAdmin.cy.js",
@@ -411,7 +411,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f4b477c0-1b76-4dcd-8d4f-47b7c67bdb96",
+          "uuid": "3bc189f3-11f4-489f-bda4-caf81d5f8250",
           "title": "Admin - Lista de Pedidos (Elo Drinks)",
           "fullFile": "",
           "file": "",
@@ -422,7 +422,7 @@
               "title": "Deve abrir o sidebar, acessar /pedidos e encontrar Casamento Natacha e Otavio",
               "fullTitle": "Admin - Lista de Pedidos (Elo Drinks) Deve abrir o sidebar, acessar /pedidos e encontrar Casamento Natacha e Otavio",
               "timedOut": null,
-              "duration": 7468,
+              "duration": 7462,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -431,20 +431,20 @@
               "context": null,
               "code": "cy.get('button[class*=\"lg:hidden\"]').filter(\":visible\").first().click();\ncy.get(':nth-child(3) > .flex').first().click();\ncy.location(\"pathname\").should(\"eq\", \"/pedidos\");\ncy.wait(2000);\ncy.get(\"tbody\").contains(/Casamento\\s+Natacha\\s+e\\s+Otavio/i).scrollIntoView().should(\"be.visible\");",
               "err": {},
-              "uuid": "9cb29fde-9765-45de-a236-10bff6e374a4",
-              "parentUUID": "f4b477c0-1b76-4dcd-8d4f-47b7c67bdb96",
+              "uuid": "49edc090-0570-4821-93b9-45ceb3a9333f",
+              "parentUUID": "3bc189f3-11f4-489f-bda4-caf81d5f8250",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9cb29fde-9765-45de-a236-10bff6e374a4"
+            "49edc090-0570-4821-93b9-45ceb3a9333f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7468,
+          "duration": 7462,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
