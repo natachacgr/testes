@@ -10,6 +10,55 @@
 			"name": "Item",
 			"item": [
 				{
+					"name": "LoginADM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let response = pm.response.json();\r",
+									"pm.environment.set(\"cookies\",response.access_token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "adm@adm",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BaseURL}}/auth/token",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "create",
 					"event": [
 						{
@@ -76,13 +125,13 @@
 								},
 								{
 									"key": "Ativo",
-									"value": "true",
+									"value": "1",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "postman-cloud:///1f0426d0-38d8-4480-a1ed-4b00be0ab95c"
+									"src": "/E:/Documentos/C317/testes2/testes/TesteAPI/coca.jpeg"
 								}
 							]
 						},
@@ -1371,6 +1420,16 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"setTimeout(() => {}, 1000); "
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"protocolProfileBehavior": {
@@ -1774,55 +1833,6 @@
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "LoginADM",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"let response = pm.response.json();\r",
-							"pm.environment.set(\"cookies\",response.access_token);"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "adm@adm",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "123",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{BaseURL}}/auth/token",
-					"host": [
-						"{{BaseURL}}"
-					],
-					"path": [
-						"auth",
-						"token"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }

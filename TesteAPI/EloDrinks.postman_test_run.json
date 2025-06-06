@@ -1,0 +1,1097 @@
+{
+	"id": "52f0d906-31db-4c0d-9880-84b338afa878",
+	"name": "EloDrinks",
+	"timestamp": "2025-06-06T21:12:20.021Z",
+	"collection_id": "33439342-8fa8d0f9-95dc-44c3-934f-6118c511a27e",
+	"folder_id": 0,
+	"environment_id": "33439342-50f9bb2f-358b-4acc-9f01-1f46855428f2",
+	"totalPass": 62,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-06-06T21:12:10.810Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "96ae5d58-986a-423a-a0f1-a95dbf918b88",
+			"name": "LoginADM",
+			"url": "https://api-elo.confianopai.com/auth/token",
+			"time": 331,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				331
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d6019a86-1be1-4823-95e7-7bbd9bb3c7e1",
+			"name": "create",
+			"url": "https://api-elo.confianopai.com/item/create/",
+			"time": 254,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 4s": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 4s": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				254
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 4s": true
+				}
+			]
+		},
+		{
+			"id": "b349afe2-a220-4355-8f10-1ff217c0fbd0",
+			"name": "all",
+			"url": "https://api-elo.confianopai.com/item/all",
+			"time": 110,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				110
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "41977f6c-82db-4a59-a558-83259a73f9e5",
+			"name": "updateFalse",
+			"url": "https://api-elo.confianopai.com/item/toogle/Status?item_id=46",
+			"time": 46,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is 202": true,
+				"Response time is less than 4s": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 202": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 4s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 202": true,
+					"Response time is less than 4s": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "5d55df20-09b7-4f9c-b4e8-578d3f54f3aa",
+			"name": "updateAtivo",
+			"url": "https://api-elo.confianopai.com/item/toogle/Status?item_id=46",
+			"time": 46,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is 202": true,
+				"Response time is less than 4s": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 202": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 4s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 202": true,
+					"Response time is less than 4s": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "63295fc7-50a0-42b9-9737-cf3917251a80",
+			"name": "getImageItem",
+			"url": "https://api-elo.confianopai.com/item/getImage/46",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "dc0c4250-9f91-42de-a971-fd0d677b1832",
+			"name": "getItem",
+			"url": "https://api-elo.confianopai.com/itemtoogle/46",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "92b9365e-b881-43a0-a13b-ca22ce0ec43e",
+			"name": "updateFalse (Desativa para nao aparecer em itens)",
+			"url": "https://api-elo.confianopai.com/item/toogle/Status?item_id=46",
+			"time": 48,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is 202": true,
+				"Response time is less than 4s": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 202": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 4s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Status code is 202": true,
+					"Response time is less than 4s": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "aa07dd93-6a33-4ec5-ae11-00b71faa1e02",
+			"name": "usergetme",
+			"url": "https://api-elo.confianopai.com/users/get/me",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "6aa90154-903b-4767-bcf3-851750731379",
+			"name": "usersProtected-route",
+			"url": "https://api-elo.confianopai.com/users/protected-route",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "dfc5791a-c832-4ceb-8c2e-7c6b308838cd",
+			"name": "Create User",
+			"url": "https://api-elo.confianopai.com/users/create/",
+			"time": 309,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				309
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "7e04264c-e2d8-40de-97e1-e03eb305b12c",
+			"name": "LoginUser",
+			"url": "https://api-elo.confianopai.com/auth/token",
+			"time": 305,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				305
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "67f5e6d5-64aa-47cf-a00b-c110d4ebda9d",
+			"name": "usersAll",
+			"url": "https://api-elo.confianopai.com/users/all",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body contains the random email": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains the random email": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body contains the random email": true
+				}
+			]
+		},
+		{
+			"id": "0797636d-8b30-4e2f-b85a-797cec5adf8b",
+			"name": "getUser",
+			"url": "https://api-elo.confianopai.com/users/39",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "0f1fa0c4-aafb-4469-a7ab-615e767f005b",
+			"name": "updateUser",
+			"url": "https://api-elo.confianopai.com/users/update/",
+			"time": 49,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "63ebd7e2-e245-4275-a0a5-01fc6c2f39fe",
+			"name": "getUserValidacaoUpdate",
+			"url": "https://api-elo.confianopai.com/users/39",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "1c51bc3d-9b31-42c4-b60d-7acb64ea35eb",
+			"name": "updateUserRole(ADM)",
+			"url": "https://api-elo.confianopai.com/users/update/Adm/Role",
+			"time": 48,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9362827b-3fd1-4134-8cce-55a3c49c24ba",
+			"name": "getUserValidacaoRole",
+			"url": "https://api-elo.confianopai.com/users/39",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "433a83ef-1db2-4a9a-8fa8-496566414981",
+			"name": "updateUserRole(Cliente)",
+			"url": "https://api-elo.confianopai.com/users/update/Adm/Role",
+			"time": 46,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "29681057-e269-4d61-8c9d-54b737a1c7f6",
+			"name": "getUserValidacaoRoleCliente",
+			"url": "https://api-elo.confianopai.com/users/39",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "5d0b8d8d-20e3-4900-8ea3-2f8b31a774fd",
+			"name": "userToogleFalse",
+			"url": "https://api-elo.confianopai.com/users/toogle/Status?user_id=39",
+			"time": 46,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "43d50957-7a1b-4801-95e4-c3d97aaa2da2",
+			"name": "userToogleAtivo",
+			"url": "https://api-elo.confianopai.com/users/toogle/Status?user_id=39",
+			"time": 47,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "65498770-e583-44b5-9a06-6c9346d405b8",
+			"name": "pedidosAll",
+			"url": "https://api-elo.confianopai.com/pedido/all",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "af4e4be9-2b3a-4e46-bbfa-96fa2c84919b",
+			"name": "createPedido",
+			"url": "https://api-elo.confianopai.com/pedido/create/",
+			"time": 63,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				63
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "d65189fb-6f00-4748-8573-3862a07a6937",
+			"name": "pedidosAllValidacao",
+			"url": "https://api-elo.confianopai.com/pedido/all",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "ea4639de-8524-4be3-bbea-1bc13e45aa80",
+			"name": "updatePedido",
+			"url": "https://api-elo.confianopai.com/pedido/set/status?Status=Pagamento&id=40",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "3fd2a986-7b36-4ae1-bfc0-19c3e2959e8e",
+			"name": "pedidosAllValidacaoUpdate",
+			"url": "https://api-elo.confianopai.com/pedido/all",
+			"time": 539,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status of the order is Pagamento": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status of the order is Pagamento": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				539
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status of the order is Pagamento": true
+				}
+			]
+		},
+		{
+			"id": "7f6621b6-23bf-480f-99a4-2c509eda8749",
+			"name": "packagesAll",
+			"url": "https://api-elo.confianopai.com/pedido/packages/all?id=1",
+			"time": 71,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				71
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "14c2a082-6a3e-445d-a254-2ba53fc1e877",
+			"name": "createPackage",
+			"url": "https://api-elo.confianopai.com/pedido/create/packages/",
+			"time": 131,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				131
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "088aad9c-2c3d-4f86-9b31-fafffea9f021",
+			"name": "packageValidacao",
+			"url": "https://api-elo.confianopai.com/pedido/all",
+			"time": 520,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				520
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "2bbb1b9e-8f31-4e5a-b40a-cb5ec355e0c9",
+			"name": "getPayment",
+			"url": "https://api-elo.confianopai.com/payment/getPayment?id=40",
+			"time": 662,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				662
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 4237,
+	"collection": {
+		"requests": [
+			{
+				"id": "96ae5d58-986a-423a-a0f1-a95dbf918b88",
+				"method": "POST"
+			},
+			{
+				"id": "d6019a86-1be1-4823-95e7-7bbd9bb3c7e1",
+				"method": "POST"
+			},
+			{
+				"id": "b349afe2-a220-4355-8f10-1ff217c0fbd0",
+				"method": "GET"
+			},
+			{
+				"id": "41977f6c-82db-4a59-a558-83259a73f9e5",
+				"method": "PUT"
+			},
+			{
+				"id": "5d55df20-09b7-4f9c-b4e8-578d3f54f3aa",
+				"method": "PUT"
+			},
+			{
+				"id": "63295fc7-50a0-42b9-9737-cf3917251a80",
+				"method": "GET"
+			},
+			{
+				"id": "dc0c4250-9f91-42de-a971-fd0d677b1832",
+				"method": "GET"
+			},
+			{
+				"id": "92b9365e-b881-43a0-a13b-ca22ce0ec43e",
+				"method": "PUT"
+			},
+			{
+				"id": "aa07dd93-6a33-4ec5-ae11-00b71faa1e02",
+				"method": "GET"
+			},
+			{
+				"id": "6aa90154-903b-4767-bcf3-851750731379",
+				"method": "GET"
+			},
+			{
+				"id": "dfc5791a-c832-4ceb-8c2e-7c6b308838cd",
+				"method": "POST"
+			},
+			{
+				"id": "7e04264c-e2d8-40de-97e1-e03eb305b12c",
+				"method": "POST"
+			},
+			{
+				"id": "67f5e6d5-64aa-47cf-a00b-c110d4ebda9d",
+				"method": "GET"
+			},
+			{
+				"id": "0797636d-8b30-4e2f-b85a-797cec5adf8b",
+				"method": "GET"
+			},
+			{
+				"id": "0f1fa0c4-aafb-4469-a7ab-615e767f005b",
+				"method": "PUT"
+			},
+			{
+				"id": "63ebd7e2-e245-4275-a0a5-01fc6c2f39fe",
+				"method": "GET"
+			},
+			{
+				"id": "1c51bc3d-9b31-42c4-b60d-7acb64ea35eb",
+				"method": "PUT"
+			},
+			{
+				"id": "9362827b-3fd1-4134-8cce-55a3c49c24ba",
+				"method": "GET"
+			},
+			{
+				"id": "433a83ef-1db2-4a9a-8fa8-496566414981",
+				"method": "PUT"
+			},
+			{
+				"id": "29681057-e269-4d61-8c9d-54b737a1c7f6",
+				"method": "GET"
+			},
+			{
+				"id": "5d0b8d8d-20e3-4900-8ea3-2f8b31a774fd",
+				"method": "PUT"
+			},
+			{
+				"id": "43d50957-7a1b-4801-95e4-c3d97aaa2da2",
+				"method": "PUT"
+			},
+			{
+				"id": "65498770-e583-44b5-9a06-6c9346d405b8",
+				"method": "GET"
+			},
+			{
+				"id": "af4e4be9-2b3a-4e46-bbfa-96fa2c84919b",
+				"method": "POST"
+			},
+			{
+				"id": "d65189fb-6f00-4748-8573-3862a07a6937",
+				"method": "GET"
+			},
+			{
+				"id": "ea4639de-8524-4be3-bbea-1bc13e45aa80",
+				"method": "PUT"
+			},
+			{
+				"id": "3fd2a986-7b36-4ae1-bfc0-19c3e2959e8e",
+				"method": "GET"
+			},
+			{
+				"id": "7f6621b6-23bf-480f-99a4-2c509eda8749",
+				"method": "GET"
+			},
+			{
+				"id": "14c2a082-6a3e-445d-a254-2ba53fc1e877",
+				"method": "POST"
+			},
+			{
+				"id": "088aad9c-2c3d-4f86-9b31-fafffea9f021",
+				"method": "GET"
+			},
+			{
+				"id": "2bbb1b9e-8f31-4e5a-b40a-cb5ec355e0c9",
+				"method": "GET"
+			}
+		]
+	}
+}

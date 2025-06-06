@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-06T21:29:59.420Z",
+    "end": "2025-06-06T21:30:06.634Z",
+    "duration": 7214,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "50f2d87a-8065-4ca5-a5ef-fbf03a4f06fd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pedidosAdmin.cy.js",
+      "file": "cypress\\e2e\\pedidosAdmin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "232a4ef8-f9dd-47e6-bff6-fecb6242e7b3",
+          "title": "Admin - Lista de Pedidos (Elo Drinks)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve abrir o sidebar, acessar /pedidos e encontrar Casamento Natacha e Otavio",
+              "fullTitle": "Admin - Lista de Pedidos (Elo Drinks) Deve abrir o sidebar, acessar /pedidos e encontrar Casamento Natacha e Otavio",
+              "timedOut": null,
+              "duration": 6024,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button[class*=\"lg:hidden\"]').filter(\":visible\").first().click();\ncy.get(':nth-child(3) > .flex').first().click();\ncy.location(\"pathname\").should(\"eq\", \"/pedidos\");\ncy.contains(\"tbody tr\", \"Casamento Natacha e Otavio\", {\n  timeout: 1000\n}).scrollIntoView().should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 1000ms: Expected to find content: 'Casamento Natacha e Otavio' within the selector: 'tbody tr' but never did.",
+                "estack": "AssertionError: Timed out retrying after 1000ms: Expected to find content: 'Casamento Natacha e Otavio' within the selector: 'tbody tr' but never did.\n    at Context.eval (webpack://cypress-elodrinks-tests/./cypress/e2e/pedidosAdmin.cy.js:39:7)",
+                "diff": null
+              },
+              "uuid": "21ea08cd-6743-47a3-a28e-baeb1c1caa11",
+              "parentUUID": "232a4ef8-f9dd-47e6-bff6-fecb6242e7b3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "21ea08cd-6743-47a3-a28e-baeb1c1caa11"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6024,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

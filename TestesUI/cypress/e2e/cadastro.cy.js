@@ -87,7 +87,7 @@ describe("Testes de Cadastro - Elo Drinks", () => {
 
     cy.get('input[id^="email"]:visible')
       .should("be.visible")
-      .type("email@email");
+      .type(gerarTimestamp() + "email@email");
 
     cy.get('input[id^="celular"]:visible')
       .should("be.visible")
@@ -95,21 +95,31 @@ describe("Testes de Cadastro - Elo Drinks", () => {
 
     cy.get('input[id^="senha"]:visible').should("be.visible").type("senha123");
 
-    // Encontrar botão submit visível
     cy.get('button[type="submit"], button')
       .contains(/Cadastre-se/i)
       .then(($buttons) => {
-        // Procurar primeiro botão visível
         const visibleButton = $buttons.filter(":visible").first();
         if (visibleButton.length > 0) {
           cy.wrap(visibleButton).click();
         } else {
-          // Se nenhum visível, forçar clique no primeiro
           cy.wrap($buttons.first()).click({ force: true });
         }
       });
 
-    // Verificar sucesso do cadastro
     cy.url({ timeout: 10000 }).should("not.include", /cadastro/);
   });
 });
+
+function gerarTimestamp() {
+  const agora = new Date();
+
+  const dia = String(agora.getDate()).padStart(2, '0');
+  const mes = String(agora.getMonth() + 1).padStart(2, '0');
+  const ano = agora.getFullYear();
+
+  const hora = String(agora.getHours()).padStart(2, '0');
+  const minuto = String(agora.getMinutes()).padStart(2, '0');
+  const segundo = String(agora.getSeconds()).padStart(2, '0');
+
+  return `${ano}${mes}${dia}_${hora}${minuto}${segundo}`;
+}
