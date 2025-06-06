@@ -131,7 +131,7 @@
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/E:/Documentos/C317/testes2/testes/TesteAPI/coca.jpeg"
+									"src": "./coca.jpeg"
 								}
 							]
 						},
@@ -172,7 +172,7 @@
 									"    pm.expect(pm.response.text()).to.include(Nome);\r",
 									"});\r",
 									"\r",
-									"let data = pm.response.json();\r",
+									"data = pm.response.json();\r",
 									"let id = null;\r",
 									"\r",
 									"for (let entry of data.Itens) {\r",
@@ -735,7 +735,7 @@
 									"const randomEmail = pm.environment.get(\"randomEmail\");\r",
 									"\r",
 									"// Parse da resposta\r",
-									"let data = pm.response.json();\r",
+									"data = pm.response.json();\r",
 									"let id = null;\r",
 									"\r",
 									"for (let entry of data) {\r",
@@ -1403,7 +1403,7 @@
 									"    pm.expect(pm.response.text()).to.include(preco);\r",
 									"});\r",
 									"\r",
-									"let data = pm.response.json();\r",
+									"data = pm.response.json();\r",
 									"let id = null;\r",
 									"console.log(preco)\r",
 									"\r",
@@ -1538,7 +1538,7 @@
 									"\r",
 									"const ID = pm.environment.get(\"idRandomPedido\");\r",
 									"\r",
-									"let data = pm.response.json();\r",
+									"data = pm.response.json();\r",
 									"let Status = \"\";\r",
 									"\r",
 									"for (let entry of data){\r",
